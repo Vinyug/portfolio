@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="wrapper">
+        <header class="maxWidthBodyBlue">
+            <img class="profil" src="/public/assets/images/profil.jpg" alt="profil">
+            <nav>
+                <ul>
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Compétences</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="profil">
+            <div class="blueDivider"></div>
+            <h1>Profil</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias, commodi repellat error vel sunt aspernatur at mollitia ipsum voluptates similique! Quidem, numquam qui? Quas delectus minus tenetur. Explicabo tenetur quae repellendus porro vel perspiciatis! Accusantium, ullam provident id reprehenderit delectus explicabo hic aliquid culpa voluptatem minima totam veritatis consectetur. </p>
+            <a href="/public/assets/documents/CV_developpeur.pdf" target="_blank">Télécharger CV</a>
+        </section>
+        
+        <section class="maxWidthBodyBlue skills">
+            <div class="whiteDivider"></div>
+            <h1>Compétences</h1>
+            <div class="containerSkills">
+                <div class="cardSkills">
+                    <h2>Front-end</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS / SCSS</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript / React</li>
+                        <li>API REST</li>
+                    </ul>
+                </div>
+                <div class="cardSkills">
+                    <h2>Back-end</h2>
+                    <ul>
+                        <li>PHP / Symfony</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="portfolio">
+            <div class="blueDivider"></div>
+            <h1>Portfolio</h1>
+            <div class="containerPortfolio">
+                <article>
+                    <img src="/public/assets/images/mint.jpg" alt="mint">
+                    <div class="overlay">
+                        <p>HTML / CSS</p>
+                        <a href="https://vinyug.github.io/MINT/" target="_blank">Visiter</a>
+                    </div>
+                </article>
+                
+                <article>
+                    <img src="/public/assets/images/codeCompany.jpg" alt="Code company">
+                    <div class="overlay">
+                        <p>Bootstrap</p>
+                        <a href="https://vinyug.github.io/tp-Code_Company/" target="_blank">Visiter</a>
+                    </div>
+                </article>
+                
+                <article>
+                    <img src="/public/assets/images/authentificator.jpg" alt="authentificator">
+                    <div class="overlay">
+                        <p>HTML / CSS / JS / API REST</p>
+                        <a href="https://vinyug.github.io/authentificator/" target="_blank">Visiter</a>
+                    </div>
+                </article>
+                
+                <article>
+                    <img src="/public/assets/images/reactApp.jpg" alt="reactApp">
+                    <div class="overlay">
+                        <p>HTML / CSS / React</p>
+                        <a href="https://vinyug.github.io/blog-react" target="_blank">Visiter</a>
+                    </div>
+                </article>
+                
+                <article>
+                    <img src="/public/assets/images/square.jpg" alt="square">
+                    <div class="overlay">
+                        <p>HTML / CSS / PHP</p>
+                        <a href="https://github.com/Vinyug/square-site" target="_blank">GitHub</a>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="maxWidthBodyBlue contact">
+            <div class="whiteDivider"></div>
+            <h1>Contact</h1>
+            <form method="post" action="">
+                <div class="inputFlex">
+                    <label for="firstname">Prénom *</label>
+                    <input type="text" id="firstname" name="firstname" class="" placeholder="Votre prénom" value="">
+                    <p class="comments"></p>
+                </div>
+                
+                <div class="inputFlex">
+                    <label for="name">Nom *</label>
+                    <input type="text" id="name" name="name" class="" placeholder="Votre nom" value="">
+                    <p class="comments"></p>
+                </div>
+                
+                <div class="inputFlex">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="" placeholder="Votre email" value="">
+                    <p class="comments"></p>
+                </div>
+                
+                <div class="inputFlex">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" class="" placeholder="Votre téléphone" value="">
+                    <p class="comments"></p>
+                </div>
+                
+                <div class="textareaFlex">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" class="" placeholder="Votre message" style="height: 125px;"></textarea>
+                    <p class="comments"></p>
+                </div>
+                    
+                <span>* Ces informations sont requises</span>
+
+                <input type="button" value="Envoyer">
+            </form>
+        </section>
+
+        <footer class="maxWidthBodyDark">
+            <p>© Copyright 2022 - Vincent GUYOMARCH. Tous droits réservés.</p>
+        </footer>
+    </body>
+</html>
