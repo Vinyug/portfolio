@@ -99,8 +99,8 @@ header::after {
     box-shadow: 0 0 0 100vmax var(--white);
     clip-path: inset(0 -100vmax);
 }
-header img {
-    height: 60px;
+header img.profil {
+    width: 60px;
     padding: 2px;
     border: 1px solid var(--dark);
     background-color: var(--white);
@@ -127,9 +127,46 @@ nav li a:hover {
     padding-bottom: 0.25rem;
     transition: all 0.3s;
 }
-@media screen and (max-width: 752px) {
+.responsive-nav-btn {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+  }
+@media screen and (max-width: 807px) {
+    .responsive-nav-btn {
+        display: block;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header img.profil {
+        position: absolute;
+        left: 0;
+    }
     nav {
+        margin-top: 63px;
+    }
+    nav ul {
         display: none;
+        flex-direction: column;
+    }
+    nav ul li  {
+        margin: 1rem 0;
+    }
+    nav ul li a {
+        margin-left: 0;
+    }
+    .active-nav {
+        display: flex;
     }
 }
 
@@ -169,7 +206,7 @@ section.skills .containerSkills {
     justify-content: center;
     text-align: center;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 8rem;
     margin: 2rem 0 5rem 0;
 }
 section.skills .containerSkills h2 {
