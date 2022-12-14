@@ -220,6 +220,13 @@ section.skills .containerSkills ul li {
     font-weight: 500;
     letter-spacing: 1px;
 }
+@media screen and (max-width: 807px) {
+    section.skills .containerSkills {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+}
 
 /* SECTION PORTFOLIO */
 section.portfolio .containerPortfolio {
@@ -288,6 +295,16 @@ section.portfolio article .overlay a {
     border: 1px solid var(--white);
     border-radius: 5px;
     font-weight: 500;
+}
+@media screen and (max-width: 445px) {
+    section.portfolio article {
+        max-width: 226px;
+        height: auto;
+    }
+    section.portfolio article img {
+        max-width: 220px;
+        height: auto;
+    }
 }
 
 /* SECTION CONTACT */
