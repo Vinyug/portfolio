@@ -400,7 +400,7 @@ footer {
     position: relative;
     color: var(--white);
     text-align: center;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem;
 }
 footer a {
     position: absolute;
@@ -412,4 +412,20 @@ footer a:hover {
     transform: scale(1.2);
     transition: all 0.5s;
     bottom: 31px;
+}
+@media screen and (max-width: 807px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    footer p {
+        order: 2;
+    }
+    footer a {
+        position: static;
+        margin-bottom: 0.5rem;
+        order: 1;
+    }
 }
