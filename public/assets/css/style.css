@@ -9,7 +9,7 @@
     /* Global colors */
     --white: rgba(255, 255, 255, 1);
     --dark: rgba(51, 51, 51, 1);
-    --blue: rgba(39, 88, 121, 1);
+    --blue: rgb(39, 88, 121, 1);
 
     /* Fonts */
     --title: 'Roboto', sans-serif;
@@ -23,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: normal;
+    scroll-behavior: smooth;
 }
 body {
     display: flex;
@@ -396,7 +397,19 @@ section.contact form input[type="button"]:hover {
 
 /* FOOTER */
 footer {
+    position: relative;
     color: var(--white);
     text-align: center;
-    padding: 2rem 0 3rem 0;
+    padding: 3rem 0 3rem 0;
+}
+footer a {
+    position: absolute;
+    bottom: 34px;
+    right: 1rem;
+    transition: all 0.5s;
+}
+footer a:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    bottom: 31px;
 }
