@@ -34,7 +34,7 @@ body {
     background-color: var(--white);
     color: var(--dark);
     font-family: var(--text);
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1;
 }
 .maxWidthBodyBlue {
@@ -176,10 +176,13 @@ nav li a:hover {
 /* SECTION PROFIL */
 section.profil p {
     max-width: 500px;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 0.5rem 0;
     line-height: 1.5;
-    margin-bottom: 5rem;
-    margin-top: 2reml;
+}
+section.profil p:nth-child(4) {
+    max-width: 500px;
+    margin: 1rem 0 5rem 0;
+    line-height: 1.5;
 }
 section.profil a {
     color: var(--dark);
@@ -281,7 +284,7 @@ section.portfolio article:hover .overlay {
 }
 section.portfolio article .overlay p {
     position: absolute;
-    width: 140px;
+    width: 300px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -309,6 +312,9 @@ section.portfolio article .overlay a {
     section.portfolio article img {
         max-width: 220px;
         height: auto;
+    }
+    section.portfolio article p {
+        font-size: 0.8rem;
     }
 }
 
