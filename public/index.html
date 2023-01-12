@@ -30,7 +30,12 @@
         <section class="profil" id="profilId">
             <div class="blueDivider"></div>
             <h1>Profil</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias, commodi repellat error vel sunt aspernatur at mollitia ipsum voluptates similique! Quidem, numquam qui? Quas delectus minus tenetur. Explicabo tenetur quae repellendus porro vel perspiciatis! Accusantium, ullam provident id reprehenderit delectus explicabo hic aliquid culpa voluptatem minima totam veritatis consectetur. </p>
+            <p>
+            Actuellement en reconversion professionnelle, dans une formation de Concepteur Développeur
+            d'Applications, je suis à la recherche d'un stage de 2 mois, qui doit se dérouler du 6 mars au 28 avril.
+            Cela me permettra d'aborder une première expérience professionnelle, la découverte au sein d'une
+            entreprise de développement et de présenter un projet pour notre examen finale. 
+            </p>
             <a href="assets/documents/CV_developpeur.pdf" target="_blank">Télécharger CV</a>
         </section>
         
@@ -81,7 +86,11 @@
                 <article>
                     <img src="assets/images/authentificator.jpg" alt="authentificator">
                     <div class="overlay">
-                        <p>HTML / CSS / JS / API REST</p>
+                        <p>
+                        HTML / CSS / JS / API REST <br>
+                        login : eric@free.fr / 123456
+                        </p>
+                        
                         <a href="https://vinyug.github.io/authentificator/" target="_blank">Visiter</a>
                     </div>
                 </article>
@@ -101,45 +110,54 @@
                         <a href="https://github.com/Vinyug/square-site" target="_blank">GitHub</a>
                     </div>
                 </article>
+
+                <article>
+                    <img src="assets/images/magiciens-du-fouet.jpg" alt="magiciens-du-fouet">
+                    <div class="overlay">
+                        <p>HTML / CSS / JS / PHP</p>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </article>
             </div>
 
         </section>
 
         <section class="maxWidthBodyBlue contact" id="contactId">
             <div class="whiteDivider"></div>
-            <h1>Contact</h1>
+            <h1>Contact (non fonctionnel)</h1>
             <form id="contact-form" method="post" action="" role="form">
                 <div class="inputFlex">
                     <label for="firstname">Prénom *</label>
                     <input type="text" id="firstname" name="firstname" class="" placeholder="Votre prénom" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentFirstname"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="name">Nom *</label>
                     <input type="text" id="name" name="name" class="" placeholder="Votre nom" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentName"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" class="" placeholder="Votre email" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentEmail"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" name="phone" class="" placeholder="Votre téléphone" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentPhone"></p>
                 </div>
                 
                 <div class="textareaFlex">
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" class="" placeholder="Votre message" style="height: 125px;"></textarea>
-                    <p class="comments"></p>
+                    <p class="comments" id="commentMessage"></p>
                 </div>
                     
                 <span>* Ces informations sont requises</span>
+                <span style="font-style: italic; font-weight: 300; margin-top: 0.5rem;">* Validation uniquement en JS</span>
 
                 <input type="button" value="Envoyer">
             </form>

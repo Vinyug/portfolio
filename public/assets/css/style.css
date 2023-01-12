@@ -59,6 +59,7 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-bottom: 4rem;
 }
 section h1 {
     font-family: var(--title);
@@ -69,14 +70,14 @@ section h1 {
     letter-spacing: 1px;
 }
 .blueDivider {
-    margin: 2rem 0 1.5rem 0;
+    margin: 3rem 0 4rem 0;
     width: 100px;
     border-top: 2px solid var(--blue);
     border-radius: 1px;
     
 }
 .whiteDivider {
-    margin: 2rem 0 1.5rem 0;
+    margin: 3rem 0 4rem 0;
     width: 100px;
     border-top: 2px solid var(--white); 
     border-radius: 1px;
@@ -177,6 +178,8 @@ section.profil p {
     max-width: 500px;
     margin: 1rem 0 3rem 0;
     line-height: 1.5;
+    margin-bottom: 5rem;
+    margin-top: 2reml;
 }
 section.profil a {
     color: var(--dark);
@@ -352,16 +355,23 @@ section.contact form input, section.contact form textarea {
     border: none;
     border-radius: 10px;
     padding: 0.5rem 1rem;
-    margin: 0 1rem;
+    margin: 0 1rem 2.5rem 0;
+}
+section.contact form input.commentError, section.contact form textarea.commentError {
+    margin: 0 1rem 0 0;
 }
 section.contact form input:focus, section.contact form textarea:focus {
     outline: 1px solid var(--dark);
     box-shadow: 0 0 6px var(--white);
 }
 section.contact form .comments {
+    display: none;
     height: 1.5rem;
-    margin: 0.25rem 0 1rem 1rem;
+    margin: 0.5rem 0 0.5rem 1rem;
     font-style: italic;
+}
+section.contact form .comments-active {
+    display: block;
 }
 section.contact form span {
     flex: 0 0 100%;
