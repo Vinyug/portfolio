@@ -412,6 +412,14 @@ section.contact form input[type="button"]:hover {
     transition: all 0.4s;
 }
 
+@media screen and (max-width: 807px) {
+    section.contact form input, section.contact form textarea {
+        margin: 0 1rem 3.5rem 0;
+    }
+    section.contact form .comments {
+        margin: 0.5rem 0 1.5rem 1rem;
+    }
+}
 /* FOOTER */
 footer {
     position: relative;
