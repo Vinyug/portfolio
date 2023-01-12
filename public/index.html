@@ -13,25 +13,35 @@
 
     <body class="wrapper">
         <header class="maxWidthBodyBlue">
-            <img class="profil" src="/public/assets/images/profil.jpg" alt="profil">
+            <a href="https://www.linkedin.com/in/vincent-guyomarch-9aa3a8105/" target="_blank"><img class="profil" src="assets/images/profil.jpg" alt="profil"></a>
             <nav>
                 <ul>
-                    <li><a href="#">Profil</a></li>
-                    <li><a href="#">Compétences</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#profilId">Profil</a></li>
+                    <li><a href="#skillsId">Compétences</a></li>
+                    <li><a href="#portfolioId">Portfolio</a></li>
+                    <li><a href="#contactId">Contact</a></li>
                 </ul>
+                <button class="responsive-nav-btn">
+                    <img src="assets/images/menu.png" alt="icone menu">
+                </button>
             </nav>
         </header>
 
-        <section class="profil">
+        <section class="profil" id="profilId">
             <div class="blueDivider"></div>
             <h1>Profil</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias, commodi repellat error vel sunt aspernatur at mollitia ipsum voluptates similique! Quidem, numquam qui? Quas delectus minus tenetur. Explicabo tenetur quae repellendus porro vel perspiciatis! Accusantium, ullam provident id reprehenderit delectus explicabo hic aliquid culpa voluptatem minima totam veritatis consectetur. </p>
-            <a href="/public/assets/documents/CV_developpeur.pdf" target="_blank">Télécharger CV</a>
+            <p>
+            Je me présente, Vincent GUYOMARCH, en poste de métreur dans le bâtiment depuis 12 ans. Après plusieurs mois d'apprentissage dans le domaine du développement en autodidacte, je me suis lancé dans une reconversion professionnelle pour m'y consacrer pleinement et avoir une direction d'apprentissage. 
+            </p>
+            <p>
+            Actuellement dans une formation de Concepteur Développeur d'Applications (en disponibilité le temps de la formation), je suis à la recherche d'un stage de 2 mois, qui doit se dérouler du 6 mars au 28 avril.
+            Cela me permettra d'aborder une première expérience professionnelle, la découverte au sein d'une
+            entreprise de développement et de présenter un projet pour notre examen finale. 
+            </p>
+            <a href="assets/documents/CV_developpeur.pdf" target="_blank">Télécharger CV</a>
         </section>
         
-        <section class="maxWidthBodyBlue skills">
+        <section class="maxWidthBodyBlue skills" id="skillsId">
             <div class="whiteDivider"></div>
             <h1>Compétences</h1>
             <div class="containerSkills">
@@ -55,12 +65,12 @@
             </div>
         </section>
         
-        <section class="portfolio">
+        <section class="portfolio" id="portfolioId">
             <div class="blueDivider"></div>
             <h1>Portfolio</h1>
             <div class="containerPortfolio">
                 <article>
-                    <img src="/public/assets/images/mint.jpg" alt="mint">
+                    <img src="assets/images/mint.jpg" alt="mint">
                     <div class="overlay">
                         <p>HTML / CSS</p>
                         <a href="https://vinyug.github.io/MINT/" target="_blank">Visiter</a>
@@ -68,7 +78,7 @@
                 </article>
                 
                 <article>
-                    <img src="/public/assets/images/codeCompany.jpg" alt="Code company">
+                    <img src="assets/images/codeCompany.jpg" alt="Code company">
                     <div class="overlay">
                         <p>Bootstrap</p>
                         <a href="https://vinyug.github.io/tp-Code_Company/" target="_blank">Visiter</a>
@@ -76,15 +86,19 @@
                 </article>
                 
                 <article>
-                    <img src="/public/assets/images/authentificator.jpg" alt="authentificator">
+                    <img src="assets/images/authentificator.jpg" alt="authentificator">
                     <div class="overlay">
-                        <p>HTML / CSS / JS / API REST</p>
+                        <p>
+                        HTML / CSS / JS / API REST <br>
+                        login : eric@free.fr / 123456
+                        </p>
+                        
                         <a href="https://vinyug.github.io/authentificator/" target="_blank">Visiter</a>
                     </div>
                 </article>
                 
                 <article>
-                    <img src="/public/assets/images/reactApp.jpg" alt="reactApp">
+                    <img src="assets/images/reactApp.jpg" alt="reactApp">
                     <div class="overlay">
                         <p>HTML / CSS / React</p>
                         <a href="https://vinyug.github.io/blog-react" target="_blank">Visiter</a>
@@ -92,51 +106,60 @@
                 </article>
                 
                 <article>
-                    <img src="/public/assets/images/square.jpg" alt="square">
+                    <img src="assets/images/square.jpg" alt="square">
                     <div class="overlay">
                         <p>HTML / CSS / PHP</p>
                         <a href="https://github.com/Vinyug/square-site" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="assets/images/magiciens-du-fouet.jpg" alt="magiciens-du-fouet">
+                    <div class="overlay">
+                        <p>HTML / CSS / JS / PHP</p>
+                        <a href="https://github.com/Vinyug/les_magiciens_du_fouet" target="_blank">GitHub</a>
                     </div>
                 </article>
             </div>
 
         </section>
 
-        <section class="maxWidthBodyBlue contact">
+        <section class="maxWidthBodyBlue contact" id="contactId">
             <div class="whiteDivider"></div>
-            <h1>Contact</h1>
-            <form method="post" action="">
+            <h1>Contact (non fonctionnel)</h1>
+            <form id="contact-form" method="post" action="" role="form">
                 <div class="inputFlex">
                     <label for="firstname">Prénom *</label>
                     <input type="text" id="firstname" name="firstname" class="" placeholder="Votre prénom" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentFirstname"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="name">Nom *</label>
                     <input type="text" id="name" name="name" class="" placeholder="Votre nom" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentName"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" class="" placeholder="Votre email" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentEmail"></p>
                 </div>
                 
                 <div class="inputFlex">
                     <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" name="phone" class="" placeholder="Votre téléphone" value="">
-                    <p class="comments"></p>
+                    <p class="comments" id="commentPhone"></p>
                 </div>
                 
                 <div class="textareaFlex">
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" class="" placeholder="Votre message" style="height: 125px;"></textarea>
-                    <p class="comments"></p>
+                    <p class="comments" id="commentMessage"></p>
                 </div>
                     
                 <span>* Ces informations sont requises</span>
+                <span style="font-style: italic; font-weight: 300; margin-top: 0.5rem;">* Validation uniquement en JS</span>
 
                 <input type="button" value="Envoyer">
             </form>
@@ -144,6 +167,9 @@
 
         <footer class="maxWidthBodyDark">
             <p>© Copyright 2022 - Vincent GUYOMARCH. Tous droits réservés.</p>
+            <a href="#"><img src="assets/images/chevron-up.png" alt="chevron up"></a>
         </footer>
+
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

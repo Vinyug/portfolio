@@ -9,7 +9,7 @@
     /* Global colors */
     --white: rgba(255, 255, 255, 1);
     --dark: rgba(51, 51, 51, 1);
-    --blue: rgba(39, 88, 121, 1);
+    --blue: rgb(39, 88, 121, 1);
 
     /* Fonts */
     --title: 'Roboto', sans-serif;
@@ -19,10 +19,12 @@
 
 /* Global */
 *, ::after, ::before {
+    scroll-padding-top: 95px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-weight: normal;
+    scroll-behavior: smooth;
 }
 body {
     display: flex;
@@ -32,7 +34,7 @@ body {
     background-color: var(--white);
     color: var(--dark);
     font-family: var(--text);
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1;
 }
 .maxWidthBodyBlue {
@@ -57,6 +59,7 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-bottom: 4rem;
 }
 section h1 {
     font-family: var(--title);
@@ -67,14 +70,14 @@ section h1 {
     letter-spacing: 1px;
 }
 .blueDivider {
-    margin: 2rem 0 1.5rem 0;
+    margin: 3rem 0 4rem 0;
     width: 100px;
     border-top: 2px solid var(--blue);
     border-radius: 1px;
     
 }
 .whiteDivider {
-    margin: 2rem 0 1.5rem 0;
+    margin: 3rem 0 4rem 0;
     width: 100px;
     border-top: 2px solid var(--white); 
     border-radius: 1px;
@@ -99,8 +102,8 @@ header::after {
     box-shadow: 0 0 0 100vmax var(--white);
     clip-path: inset(0 -100vmax);
 }
-header img {
-    height: 60px;
+header img.profil {
+    width: 60px;
     padding: 2px;
     border: 1px solid var(--dark);
     background-color: var(--white);
@@ -127,16 +130,58 @@ nav li a:hover {
     padding-bottom: 0.25rem;
     transition: all 0.3s;
 }
-@media screen and (max-width: 752px) {
+.responsive-nav-btn {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+  }
+@media screen and (max-width: 807px) {
+    .responsive-nav-btn {
+        display: block;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header img.profil {
+        position: absolute;
+        left: 0;
+    }
     nav {
+        margin-top: 63px;
+    }
+    nav ul {
         display: none;
+        flex-direction: column;
+    }
+    nav ul li  {
+        margin: 1rem 0;
+    }
+    nav ul li a {
+        margin-left: 0;
+    }
+    .active-nav {
+        display: flex;
     }
 }
 
 /* SECTION PROFIL */
 section.profil p {
     max-width: 500px;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.5;
+}
+section.profil p:nth-child(4) {
+    max-width: 500px;
+    margin: 1rem 0 5rem 0;
     line-height: 1.5;
 }
 section.profil a {
@@ -169,7 +214,7 @@ section.skills .containerSkills {
     justify-content: center;
     text-align: center;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 8rem;
     margin: 2rem 0 5rem 0;
 }
 section.skills .containerSkills h2 {
@@ -182,6 +227,13 @@ section.skills .containerSkills ul li {
     line-height: 1.5;
     font-weight: 500;
     letter-spacing: 1px;
+}
+@media screen and (max-width: 807px) {
+    section.skills .containerSkills {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
 }
 
 /* SECTION PORTFOLIO */
@@ -232,7 +284,7 @@ section.portfolio article:hover .overlay {
 }
 section.portfolio article .overlay p {
     position: absolute;
-    width: 140px;
+    width: 300px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -251,6 +303,19 @@ section.portfolio article .overlay a {
     border: 1px solid var(--white);
     border-radius: 5px;
     font-weight: 500;
+}
+@media screen and (max-width: 445px) {
+    section.portfolio article {
+        max-width: 226px;
+        height: auto;
+    }
+    section.portfolio article img {
+        max-width: 220px;
+        height: auto;
+    }
+    section.portfolio article p {
+        font-size: 0.8rem;
+    }
 }
 
 /* SECTION CONTACT */
@@ -296,16 +361,23 @@ section.contact form input, section.contact form textarea {
     border: none;
     border-radius: 10px;
     padding: 0.5rem 1rem;
-    margin: 0 1rem;
+    margin: 0 1rem 2.5rem 0;
+}
+section.contact form input.commentError, section.contact form textarea.commentError {
+    margin: 0 1rem 0 0;
 }
 section.contact form input:focus, section.contact form textarea:focus {
     outline: 1px solid var(--dark);
     box-shadow: 0 0 6px var(--white);
 }
 section.contact form .comments {
+    display: none;
     height: 1.5rem;
-    margin: 0.25rem 0 1rem 1rem;
+    margin: 0.5rem 0 0.5rem 1rem;
     font-style: italic;
+}
+section.contact form .comments-active {
+    display: block;
 }
 section.contact form span {
     flex: 0 0 100%;
@@ -340,9 +412,45 @@ section.contact form input[type="button"]:hover {
     transition: all 0.4s;
 }
 
+@media screen and (max-width: 807px) {
+    section.contact form input, section.contact form textarea {
+        margin: 0 1rem 3.5rem 0;
+    }
+    section.contact form .comments {
+        margin: 0.5rem 0 1.5rem 1rem;
+    }
+}
 /* FOOTER */
 footer {
+    position: relative;
     color: var(--white);
     text-align: center;
-    padding: 2rem 0 3rem 0;
+    padding: 3rem;
+}
+footer a {
+    position: absolute;
+    bottom: 34px;
+    right: 1rem;
+    transition: all 0.5s;
+}
+footer a:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    bottom: 31px;
+}
+@media screen and (max-width: 807px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    footer p {
+        order: 2;
+    }
+    footer a {
+        position: static;
+        margin-bottom: 0.5rem;
+        order: 1;
+    }
 }
